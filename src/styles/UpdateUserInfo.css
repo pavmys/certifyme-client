@@ -1,0 +1,123 @@
+.update-info-page {
+  border: 1px solid #0a0a0a;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../img/black-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.update-info__main {
+  /* border: 3px solid red; */
+  padding: 80px 200px;
+  color: white;
+}
+
+.update-info__main h2 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.find-user__section {
+  border: 1px solid white;
+  border-radius: 30px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  padding: 30px;
+}
+
+.find-user__section h3 {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.find-user__form {
+  /* border: 1px solid white; */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.find-user__form input {
+  width: 400px;
+  padding: 11px;
+  background: none;
+  border: 1px solid white;
+  color: white;
+}
+
+.find-user__form button {
+  width: 100px;
+  background: white;
+  padding: 11px;
+  border: none;
+  cursor: pointer;
+}
+
+.update-info__form {
+  margin: 60px 100px;
+  border: 1px solid white;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  backdrop-filter: blur(5px);
+  padding: 50px;
+}
+
+.update-info__form input {
+  padding: 11px;
+  background: none;
+  border: 1px solid white;
+  color: white;
+}
+
+.update-info__form select {
+  padding: 11px;
+  background: none;
+  border: 1px solid white;
+  color: white;
+}
+
+.update-info__form option {
+  padding: 11px;
+  background: #0a0a0a;
+  border: 1px solid white;
+  color: white;
+}
+
+.user__group__div,
+.user__specialty__div,
+.user__cathedra__div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.user__cathedra__div select {
+  margin-top: 0;
+}
+
+.update-info__form button {
+  border: none;
+  background-color: white;
+  color: black;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.update-info__form button:hover {
+  transform: scale(1.03);
+  transition-duration: 500ms;
+}

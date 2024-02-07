@@ -1,0 +1,91 @@
+/* REGISTER */
+.register-page {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../img/white-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 45px;
+}
+
+.register__h1 {
+  width: 100%;
+  font-size: 64px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.register__form {
+  border: 1px solid black;
+  border-radius: 30px;
+  width: 600px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  backdrop-filter: blur(5px);
+  margin: 50px calc((100% - 600px) / 2);
+}
+
+.register__form input {
+  width: 100%;
+  padding: 11px;
+}
+
+.register__form span {
+  text-align: center;
+  font-size: 14px;
+}
+
+.register__form button {
+  border: none;
+  background-color: black;
+  color: white;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 24px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.register__form p {
+  font-size: 12px;
+  color: red;
+  text-align: center;
+}
+
+.user__password__div,
+.user__specialty__div,
+.user__course__div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user__specialty__div select {
+  padding: 11px;
+  width: 360px;
+}
+
+.user__password__div {
+  gap: 24px;
+  cursor: pointer;
+}
+
+.user__course__div input {
+  width: 360px;
+}
+
+.user__group__div {
+  /* border: 3px solid green; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user__group__div select {
+  width: 80px;
+  padding: 8px;
+}

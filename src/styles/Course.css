@@ -1,0 +1,204 @@
+/* COURSE PAGE */
+.course-page {
+  border: 1px solid #0a0a0a;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../img/black-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.course__main {
+  margin: 65px 200px;
+  /* border: 3px solid red; */
+}
+
+.course__main h3 {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.course__info {
+  color: white;
+  margin-bottom: 80px;
+  /* border: 3px solid green; */
+}
+
+.course__info h2 {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.course__info p {
+  text-align: center;
+}
+
+.applied__certificate {
+  /* border: 3px solid green; */
+}
+
+.applied__certificate h3 {
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.applied__certificate__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  color: white;
+}
+
+.applied__certificate tr {
+  height: 50px;
+}
+
+.applied__certificate__table thead {
+  background-color: white;
+  color: black;
+}
+
+.applied__certificate__table tbody button {
+  height: 40px;
+  width: 140px;
+  font-size: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.chosen__certificate {
+  margin-top: 80px;
+  backdrop-filter: blur(5px);
+  /* border: 3px solid green; */
+}
+
+.chosen__certificate h3 {
+  font-size: 32px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.chosen__certificate__form {
+  /* border: 2px solid orange; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.chosen__certificate__form * {
+  height: 40px;
+  text-align: center;
+}
+
+.chosen__certificate__form input {
+  background-color: #0a0a0a;
+  color: white;
+  border: 1px solid white;
+}
+
+.chosen__certificate__form button {
+  padding: 10px 41px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.chosen__certificate__form button:hover {
+  border-radius: 15px;
+  transition-duration: 500ms;
+}
+
+.chosen__certificate__cancel {
+  background-color: #940000;
+}
+
+.chosen__certificate__submit {
+  background-color: #00ad1c;
+}
+
+.available__certificates {
+  margin-top: 80px;
+  color: white;
+}
+
+.available__certificates h3 {
+  font-size: 32px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.available__certificates__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.available__certificates__table tr {
+  height: 50px;
+}
+
+.available__certificates__table thead {
+  background-color: white;
+  color: black;
+}
+
+.available__certificates__table button {
+  height: 30px;
+  padding: 5px 43px;
+  border: none;
+  background-color: #00ad1c;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.available__certificates__table button:hover {
+  transform: scale(1.05);
+  transition-duration: 400ms;
+}
+
+/* FOR TEACHER LOOKING ON HIS COURSE */
+.view-course-applies {
+  backdrop-filter: blur(5px);
+  border-collapse: collapse;
+  text-align: center;
+  overflow-x: auto;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  color: white;
+}
+
+.view-course-applies thead {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+.view-course-applies tbody tr {
+  border-bottom: 1px solid white;
+}
+
+.view-course-applies td {
+  padding: 20px;
+}

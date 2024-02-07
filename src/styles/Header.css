@@ -1,0 +1,95 @@
+.header {
+  margin-top: 30px;
+  margin-left: 70px;
+  margin-right: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  text-align: center;
+}
+
+.header__logo h1 {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.header__logo span {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.header__link {
+}
+
+.header__link a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* WHEN LOGGED IN */
+.header__logo__login {
+  text-align: center;
+  text-decoration: none;
+}
+
+.header__logo__login h1 {
+  font-size: 64px;
+  font-weight: 700;
+  color: white;
+}
+
+.header__logo__login span {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+
+.header__nav {
+}
+
+.header__nav__list {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.header__nav__item {
+  padding: 10px 14px;
+  border-radius: 30px;
+  background-color: #1a1a1a;
+}
+
+.header__nav__item:hover {
+  transform: translateY(-5px);
+  border: 1px solid white;
+  transition-duration: 500ms;
+}
+
+.header__nav__item a,
+.header__nav__item span {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.header__name__login {
+  text-align: center;
+  color: white;
+}
+
+.header__name__login span:nth-child(1) {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.header__name__login span:nth-child(2) {
+  font-size: 16px;
+  font-weight: 500;
+}
