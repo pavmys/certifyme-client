@@ -1,9 +1,38 @@
 import React, { useState, useEffect, useContext } from "react";
 import { AuthContext } from "../context/authContext";
 import "../styles/Profile.css";
+import axios from "axios";
 
 function DekanOrZavKafedryProfile(props) {
   const type = props.type;
+
+  const [applies, setApplies] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.post(
+          "http://localhost:8000/api/applies/getApplies",
+          {},
+          { withCredentials: true }
+        );
+        setApplies(res.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
+  console.log(applies);
+
+  const convertTime = (time) => {
+    // Create a Date object from the string
+    const dateObject = new Date(time);
+
+    // Format the date as a string in a desired format
+    const formattedTime = dateObject.toLocaleString(); // Adjust the format as needed
+    return formattedTime;
+  };
 
   return (
     <main className="profile__main">
@@ -37,9 +66,9 @@ function DekanOrZavKafedryProfile(props) {
                 <td>Ім'я</td>
                 <td>Потік</td>
                 <td>Група</td>
-                <td>Курс</td>
                 <td>Спеціальність</td>
-                <td>Викладач</td>
+                <td>Предмет</td>
+                <td>Кафедра</td>
                 <td>Сертифікат</td>
                 <td>Дата подання заявки</td>
                 <td>Статус заявки</td>
@@ -47,48 +76,48 @@ function DekanOrZavKafedryProfile(props) {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>14</td>
-                <td>Миськів</td>
-                <td>Павло</td>
-                <td>ФЕІ</td>
-                <td>52</td>
-                <td>Прикладна теорія інформації</td>
-                <td>Комп'ютерні науки</td>
-                <td>Болеста І.М.</td>
-                <td>DES 2023</td>
-                <td>1/26/2024, 14:28:35 PM</td>
-                <td>На розгляді</td>
-                <td>Сертифікат</td>
-              </tr>
-              <tr>
-                <td>15</td>
-                <td>Заставський</td>
-                <td>Святослав</td>
-                <td>ФЕІ</td>
-                <td>53</td>
-                <td>Системи штучного інтелекту</td>
-                <td>Комп'ютерні науки</td>
-                <td>Грабовський В.А.</td>
-                <td>DES 2022</td>
-                <td>1/26/2024, 14:28:35 PM</td>
-                <td>Підтверджено</td>
-                <td>Сертифікат</td>
-              </tr>
-              <tr>
-                <td>16</td>
-                <td>Миськів</td>
-                <td>Павло</td>
-                <td>ФЕІ</td>
-                <td>52</td>
-                <td>Хмарні обчислення</td>
-                <td>Комп'ютерні науки</td>
-                <td>Огірко І.В.</td>
-                <td>DES 2023</td>
-                <td>1/26/2024, 14:28:35 PM</td>
-                <td>На розгляді</td>
-                <td>Сертифікат</td>
-              </tr>
+              {applies.map((apply) => (
+                <tr key={apply.id}>
+                  <td>{apply.id}</td>
+                  <td>{apply.surname}</td>
+                  <td>{apply.name}</td>
+                  <td>{apply.potik}</td>
+                  <td>
+                    {apply.course_number}
+                    {apply.group_number}
+                  </td>
+                  <td>{apply.specialty_name}</td>
+                  <td>{apply.course_name}</td>
+                  <td>{apply.cathedra_name}</td>
+                  <td>
+                    {apply.type} {apply.year}
+                  </td>
+                  <td>{convertTime(apply.applied_at)}</td>
+                  {apply.status === "На розгляді" && (
+                    <>
+                      <td style={{ backgroundColor: "gray" }}>
+                        {apply.status}
+                      </td>
+                    </>
+                  )}
+                  {apply.status === "Підтверджено" && (
+                    <>
+                      <td style={{ backgroundColor: "#00ad1c" }}>
+                        {apply.status}
+                      </td>
+                    </>
+                  )}
+                  <td>
+                    <a
+                      target="_blank"
+                      href={apply.path}
+                      style={{ color: "white" }}
+                    >
+                      Сертифікат
+                    </a>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </section>

@@ -6,14 +6,12 @@ import "../styles/Course.css";
 
 function TeacherCourse() {
   const { currentUser } = useContext(AuthContext);
-  // const [certificates, setCertificates] = useState([]);
+
   const [applies, setApplies] = useState([]);
   const [chosenApply, setChosenApply] = useState(null);
 
   const [err, setErr] = useState(null);
   const [success, setSuccess] = useState(null);
-
-  const navigate = useNavigate();
 
   const subjectId = location.pathname.split("/")[2];
 
@@ -42,44 +40,15 @@ function TeacherCourse() {
     fetchData();
   }, []);
 
-  // useEffect(
-  //   (apply) => {
-  //     setChosenApply((prev) => ({ ...prev, ...apply }));
-  //   },
-  //   [chosenApply]
-  // );
-
-  // const chooseApply = (apply) => {
-  //   setChosenApply((prev) => ({ ...prev, ...apply }));
-  // };
-
-  // const handleSubmit = (apply) => {
-  //   chooseApply(apply);
-  //   submitApply();
-  // };
-
-  // const submitApply = async () => {
-  //   try {
-  //     // chooseApply(apply);
-  //     console.log(chosenApply);
-  //     // const res = await axios.post("");
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
   useEffect(() => {
     if (chosenApply) {
       try {
-        // console.log(chosenApply);
         const res = axios.post(
           "http://localhost:8000/api/applies/submitApply",
           chosenApply,
           { withCredentials: true }
         );
         setSuccess("Заявку підтверджено");
-        // console.log(res);
-        // navigate(`/courses/${subjectId}`);
       } catch (error) {
         console.log(error);
       }

@@ -104,6 +104,7 @@ function Profile() {
         <AdministratorProfile
           surname={currentUser.surname}
           name={currentUser.name}
+          type={currentUser.type}
         />
       )}
 
