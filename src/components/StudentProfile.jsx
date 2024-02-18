@@ -126,9 +126,13 @@ function StudentProfile(props) {
                 <span>Завантажено: {convertTime(certificate.updated_at)}</span>
               </div>
             );
-          } else {
+          } else if (certificate.active === 1) {
             return (
-              <div className="profile__certificate" key={certificate.id}>
+              <div
+                className="profile__certificate"
+                key={certificate.id}
+                style={{ opacity: "1" }}
+              >
                 <iframe src={certificate.path} frameBorder="0"></iframe>
                 <h3>
                   {certificate.type} {certificate.year}
