@@ -6,6 +6,11 @@
   font-family: "Montserrat", sans-serif;
 }
 
+#root {
+  border: 5px solid green;
+  width: 100%;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

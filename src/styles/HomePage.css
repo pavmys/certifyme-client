@@ -1,3 +1,4 @@
+/* for desktops */
 .home-page {
   border: 1px solid white;
   width: 100%;
@@ -92,4 +93,122 @@
 
 .main__form a {
   color: black;
+}
+
+/* RESPONSIVE STYLES */
+/* for tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .home-page {
+    /* border: 5px solid purple; */
+    width: 100%;
+  }
+
+  .main {
+    /* border: 3px solid red; */
+    margin: 50px 0;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .main__text {
+    /* border: 3px solid green; */
+    width: 100%;
+    text-align: center;
+  }
+
+  .main__text h2 {
+    font-size: 64px;
+    font-weight: 600;
+  }
+
+  .main__text span {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .main__form {
+    border: 1px solid black;
+    width: calc(100% - 200px);
+    margin: 0 100px;
+    padding: 26px 36px;
+    gap: 20px;
+  }
+
+  .main__form h2 {
+    font-size: 26px;
+  }
+
+  .main__form input {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  .main__form button {
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: white;
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/* for mobile phones */
+@media screen and (max-width: 767px) {
+  .home-page {
+    width: 100%;
+  }
+
+  .main {
+    margin: 50px 0;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .main__text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main__text h2 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  .main__text span {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  .main__form {
+    border: 1px solid black;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    padding: 16px 26px;
+    gap: 20px;
+  }
+
+  .main__form h2 {
+    font-size: 26px;
+  }
+
+  .main__form input {
+    width: calc(100% - 52px);
+    margin: 0 auto;
+  }
+
+  .main__form button {
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: white;
+    width: calc(100% - 52px);
+    margin: 0 auto;
+  }
 }
