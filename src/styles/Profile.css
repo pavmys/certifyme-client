@@ -199,7 +199,7 @@
 }
 
 .profile__applies h2 {
-  border: 3px solid green;
+  /* border: 3px solid green; */
   font-size: 40px;
   font-weight: 700;
   text-align: center;

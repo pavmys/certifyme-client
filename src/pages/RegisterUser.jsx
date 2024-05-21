@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import "../styles/RegisterUser.css";
-import HeaderWithLogin from "../components/HeaderWIthLogin";
+import HeaderWithLogin from "../components/HeaderWIthoutLogin";
 import axios from "axios";
 import { AuthContext } from "../context/authContext";
 import { useNavigate } from "react-router-dom";

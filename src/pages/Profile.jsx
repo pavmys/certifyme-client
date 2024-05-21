@@ -63,20 +63,7 @@ function Profile() {
     currentUser.type === "Завідувач кафедри" ||
     currentUser.type === "Деканат"
   ) {
-    // useEffect(() => {
-    //   const fetchData = async () => {
-    //     try {
-    //       const res = await axios.get(
-    //         // "http://localhost:8000/api/subject/getProfileSubjects",
-    //         { withCredentials: true }
-    //       );
-    //       // setTeacherSubjects(res.data);
-    //     } catch (error) {
-    //       console.error(error);
-    //     }
-    //   };
-    //   fetchData();
-    // }, []);
+    
   }
 
   return (

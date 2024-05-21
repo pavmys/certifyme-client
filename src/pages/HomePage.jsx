@@ -13,7 +13,6 @@ function HomePage() {
     user_email: "",
     user_password: "",
   });
-  // console.log(inputs);
 
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -23,20 +22,12 @@ function HomePage() {
   const [err, setErr] = useState(null);
 
   const { login } = useContext(AuthContext);
-  // console.log(currentUser);
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      // const res = await axios.post(
-      //   "http://localhost:8000/api/auth/login",
-      //   inputs,
-      //   { withCredentials: true }
-      // );
-      // console.log(res);
       await login(inputs);
       setLoaderClass("loader__visible");
-      // setLoaderClass("loader__hidden");
       navigate("/courses");
     } catch (error) {
       setErr(error.response.data);
@@ -76,9 +67,6 @@ function HomePage() {
         </form>
       </main>
 
-      {/* <div className="loader">
-        <span class="loader__span"></span>
-      </div> */}
       <Loader className={loaderClass} />
     </div>
   );

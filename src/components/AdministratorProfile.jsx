@@ -59,9 +59,6 @@ function AdministratorProfile(props) {
         <Link to="/update-user">
           <button>Редагувати дані користувача</button>
         </Link>
-        {/* <Link to="/show-all-applies">
-          <button>Переглянути заявки</button>
-        </Link> */}
       </section>
 
       <section className="profile__applies">

@@ -33,7 +33,6 @@ function Register() {
     user_course_number: 1,
     user_group_number: 1,
   });
-  // console.log(inputs);
 
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
